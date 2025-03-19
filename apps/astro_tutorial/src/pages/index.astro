@@ -1,6 +1,7 @@
 ---
 import Welcome from '../components/Welcome.astro'
 import Layout from '../layouts/Layout.astro'
+import Counter from '../components/Counter.svelte'
 
 const pageTitle = 'Tutorial'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -10,4 +11,5 @@ const pageTitle = 'Tutorial'
 <Layout {pageTitle}>
 	<h1 class="text-5xl font-bold text-blue-300">Hello world!</h1>
 	<!-- <Welcome /> -->
+	<Counter client:load />
 </Layout>
