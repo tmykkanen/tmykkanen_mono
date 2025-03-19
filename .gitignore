@@ -8,8 +8,9 @@ node_modules
 # testing
 coverage
 
-# svelte
+# svelte / astro
 .svelte-kit
+.astro
 
 # misc
 .DS_Store
