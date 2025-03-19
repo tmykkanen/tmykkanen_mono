@@ -1,4 +1,6 @@
 ---
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { getCollection } from 'astro:content'
 
 import Layout from '../../layouts/Layout.astro'
@@ -11,7 +13,7 @@ const pageTitle = 'Tags'
 
 <Layout {pageTitle}>
 	<h2>Tags!</h2>
-	<div class="flex flex-row gap-2 mb-4">
+	<div class="mb-4 flex flex-row gap-2">
 		{
 			uniqueTags.map((tag) => (
 				<a href={`/tags/${tag}`} class="btn btn-secondary btn-xs">

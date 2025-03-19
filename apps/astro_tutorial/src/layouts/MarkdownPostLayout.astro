@@ -1,6 +1,8 @@
 ---
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Layout from './Layout.astro'
-import type { MarkdownLayoutProps } from 'astro'
+// import type { MarkdownLayoutProps } from 'astro'
 
 const { frontmatter } = Astro.props
 const { title: pageTitle, author, pubDate, tags } = frontmatter
