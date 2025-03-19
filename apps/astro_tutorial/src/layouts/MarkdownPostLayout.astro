@@ -5,13 +5,33 @@ import type { MarkdownLayoutProps } from 'astro'
 type Props = MarkdownLayoutProps<{
 	title: string
 	author: string
+	pubDate: Date
+	tags: string[]
 }>
 
 const { frontmatter }: Props = Astro.props
+const { title: pageTitle, author, pubDate, tags } = frontmatter
+let date
+if (pubDate) {
+	date = new Date(pubDate).toLocaleDateString()
+}
 ---
 
-<Layout pageTitle={frontmatter.title}>
-	<h1>{frontmatter.title}</h1>
-	<p>Written by {frontmatter.author}</p>
+<Layout {pageTitle}>
+	<h1>{pageTitle}</h1>
+	{author && <p>Written by: {author}</p>}
+	{date && <p>Published on: {date}</p>}
+	{
+		tags && (
+			<div class="flex flex-row gap-2">
+				{tags.map((tag) => (
+					<a href={`/tags/${tag}`} class="btn btn-secondary btn-xs">
+						{tag}
+					</a>
+				))}
+			</div>
+		)
+	}
+
 	<slot />
 </Layout>

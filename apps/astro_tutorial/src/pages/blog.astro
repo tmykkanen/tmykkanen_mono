@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-const allPosts = Object.values(import.meta.glob('./posts/*md', { eager: true }))
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
 const pageTitle = 'Tutorial | Blog'
 ---
 
