@@ -36,3 +36,8 @@
 	--depth: 0;
 	--noise: 0;
 }
+
+@theme {
+	/* --font-sans: 'Source Sans 3', 'sans'; */
+	--font-sans: 'Poppins', 'sans';
+}

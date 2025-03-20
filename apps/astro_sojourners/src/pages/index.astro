@@ -1,13 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout>
-	<header>
-		<nav>
-			<a href="/">Sojourners Church</a>
-			<button>Hamburger</button>
+	<header class="w-full">
+		<nav class="text-neutral flex justify-between uppercase">
+			<a href="/" class="btn btn-ghost text-xl">Sojourners Church</a>
+			<button class="btn btn-ghost"><Icon name="line-md:menu" class="text-3xl" /> </button>
 		</nav>
 	</header>
-	<h1 class="text-5xl">Hello world!</h1>
+	<main class="flex flex-col items-center">
+		<div class="prose flex flex-col items-center">
+			<h1 class="text-center text-4xl">
+				We exist to be and make <span class="text-5xl uppercase">eternally joyful disciples</span> of
+				Jesus Christ.
+			</h1>
+			<button class="btn btn-primary rounded-3xl uppercase"
+				>10 AM Sundays at the Skyline Plaza | Click Here for Livestream</button
+			>
+		</div>
+	</main>
+	<footer class="flex">
+		<div>
+			<h3>Sundays at 10am</h3>
+			<p>1679 West Main Street Skyline Plaza Albert Lea, MN 56007</p>
+			<h3>Contact Us</h3>
+			<a>hello@sojourners.church</a>
+			<p>(507) 552-1595</p>
+			<div class="flex gap-2">
+				<a href="">
+					<Icon name="mdi:facebook" class="text-2xl" />
+				</a>
+				<a href="">
+					<Icon name="mdi:youtube" class="text-2xl" />
+				</a>
+			</div>
+		</div>
+		<div>
+			<h3>Weekly Bulletin</h3>
+			<p>Sign up to stay informed and connected to Sojourners Church weekly happenings.</p>
+			<form action="">
+				<fieldset class="fieldset bg-base-100 border-base-300 rounded-box w-xs border p-4">
+					<!-- <legend class='fieldset-legend'>Login</legend> -->
+
+					<label class="fieldset-label">Email</label>
+					<input type="email" class="input" placeholder="Email" />
+
+					<label class="fieldset-label">Password</label>
+					<input type="password" class="input" placeholder="Password" />
+
+					<button class="btn mt-4">Submit</button>
+				</fieldset>
+			</form>
+			<h3>Contact Us</h3>
+			<a>hello@sojourners.church</a>
+			<p>(507) 552-1595</p>
+			<div class="flex gap-2">
+				<a href="">
+					<Icon name="mdi:facebook" class="text-2xl" />
+				</a>
+				<a href="">
+					<Icon name="mdi:youtube" class="text-2xl" />
+				</a>
+			</div>
+		</div>
+	</footer>
 </Layout>

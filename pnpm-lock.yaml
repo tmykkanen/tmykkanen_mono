@@ -44,6 +44,12 @@ importers:
       '@astrojs/svelte':
         specifier: ^7.0.6
         version: 7.0.6(@types/node@22.13.10)(astro@5.5.3(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@2.4.2)(lightningcss@1.29.2)(svelte@5.23.2)(typescript@5.8.2)(yaml@2.7.0)
+      '@fontsource-variable/source-sans-3':
+        specifier: ^5.2.6
+        version: 5.2.6
+      '@fontsource/poppins':
+        specifier: ^5.2.5
+        version: 5.2.5
       '@tailwindcss/vite':
         specifier: ^4.0.14
         version: 4.0.14(vite@6.2.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
@@ -63,6 +69,15 @@ importers:
         specifier: ^5.8.2
         version: 5.8.2
     devDependencies:
+      '@iconify-json/line-md':
+        specifier: ^1.2.5
+        version: 1.2.5
+      '@iconify-json/mdi':
+        specifier: ^1.2.3
+        version: 1.2.3
+      '@iconify-json/solar':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.0.14)
@@ -555,6 +570,12 @@ packages:
     resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
+  '@fontsource-variable/source-sans-3@5.2.6':
+    resolution: {integrity: sha512-bQNODN60NkMx9odF8oFyMh2blFEmuQ7VdEsPhUP+/vr99qpl7nHu/v+bZrKiBFqbSLQUiMM9kJFEX3LApR+A8g==}
+
+  '@fontsource/poppins@5.2.5':
+    resolution: {integrity: sha512-1S3k45pZOz2jqGPPqKw0in3uxFwnB+d5jSU8Tp9YwH/dIJptE3jdkQbYN0QD861GtuOpn6QhPW/yKt1w7hVRBQ==}
+
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
     engines: {node: '>=18.18.0'}
@@ -574,6 +595,15 @@ packages:
   '@humanwhocodes/retry@0.4.2':
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/line-md@1.2.5':
+    resolution: {integrity: sha512-6zFKhs6g++kFJLLi+ye5nPoHgjYh44yVLjua0tmbxH1HdImMQZ6rkRsPnBgxADY4bQWiapXBzfoiz7+UBXgtWg==}
+
+  '@iconify-json/mdi@1.2.3':
+    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
+
+  '@iconify-json/solar@1.2.2':
+    resolution: {integrity: sha512-lcTb6DWL4HZObiY1W3fHfuxxuQHUc6CFHFeywKEx7Ry0k+dU6POZCMC7oVLr0F8vuf+KgaQ3oOoGO/yFzOwrNg==}
 
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
@@ -3776,6 +3806,10 @@ snapshots:
       '@eslint/core': 0.12.0
       levn: 0.4.1
 
+  '@fontsource-variable/source-sans-3@5.2.6': {}
+
+  '@fontsource/poppins@5.2.5': {}
+
   '@humanfs/core@0.19.1': {}
 
   '@humanfs/node@0.16.6':
@@ -3788,6 +3822,18 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.2': {}
+
+  '@iconify-json/line-md@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/mdi@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/solar@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/tools@4.1.2':
     dependencies:
