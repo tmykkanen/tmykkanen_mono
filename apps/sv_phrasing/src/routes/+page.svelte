@@ -5,7 +5,7 @@
 
 	type Word = {
 		word: string
-		id: number
+		id: string
 	}
 
 	type TextGroup = {
@@ -15,40 +15,40 @@
 
 	let data: TextGroup[] = $state([
 		{
-			textGroupId: 'text-group-1',
+			textGroupId: crypto.randomUUID(),
 			contents: [
 				{
 					word: 'this',
-					id: 1,
+					id: crypto.randomUUID(),
 				},
 				{
 					word: 'is',
-					id: 2,
+					id: crypto.randomUUID(),
 				},
 				{
 					word: 'a',
-					id: 3,
+					id: crypto.randomUUID(),
 				},
 				{
 					word: 'sentence',
-					id: 4,
+					id: crypto.randomUUID(),
 				},
 			],
 		},
 		{
-			textGroupId: 'text-group-2',
+			textGroupId: crypto.randomUUID(),
 			contents: [
 				{
 					word: 'with',
-					id: 5,
+					id: crypto.randomUUID(),
 				},
 				{
 					word: 'multiple',
-					id: 6,
+					id: crypto.randomUUID(),
 				},
 				{
 					word: 'arrays',
-					id: 7,
+					id: crypto.randomUUID(),
 				},
 			],
 		},
@@ -59,12 +59,12 @@
 		const { contents } = group
 
 		const newGroupBeforeWord = {
-			textGroupId: '',
+			textGroupId: crypto.randomUUID(),
 			contents: contents.slice(0, wordIndex),
 		}
 
 		const newGroupWordAndAfter = {
-			textGroupId: '',
+			textGroupId: crypto.randomUUID(),
 			contents: contents.slice(wordIndex),
 		}
 
@@ -74,9 +74,12 @@
 	const handleClick = (e: MouseEvent) => {
 		// Set variables
 		const clickTarget = e.target as HTMLDivElement
+		console.log(clickTarget)
 		// Make TS happy for parentElement
 		if (!clickTarget.parentElement) return
 		const targetDiv = clickTarget.parentElement.dataset.textGroup
+		if (!targetDiv) return
+
 		const targetWord = clickTarget.innerHTML.trim()
 
 		// Find indexes for Group and Word
@@ -93,9 +96,9 @@
 		data.splice(groupIndex, 1, newGroupBeforeWord, newGroupWordAndAfter)
 
 		// Renumber textGroupIds
-		data.forEach((obj, i) => {
-			obj.textGroupId = `text-group-${i + 1}`
-		})
+		// data.forEach((obj, i) => {
+		// 	obj.textGroupId = crypto.randomUUID()
+		// })
 	}
 
 	$inspect(data).with(console.trace)
@@ -110,7 +113,7 @@
 	{#each data as { textGroupId, contents }}
 		<div data-text-group={textGroupId}>
 			{#each contents as { word, id }}
-				<span data-word-Id={`word-${id}`}>{`${word}\n`}</span>
+				<span data-word-Id={id}>{`${word}\n`}</span>
 			{/each}
 		</div>
 	{/each}
