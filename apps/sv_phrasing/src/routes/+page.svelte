@@ -97,6 +97,8 @@
 			obj.textGroupId = `text-group-${i + 1}`
 		})
 	}
+
+	$inspect(data).with(console.trace)
 </script>
 
 <h1 class="text-4xl">Testing String Split</h1>
