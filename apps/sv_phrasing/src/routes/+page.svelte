@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { draggable } from '@neodrag/svelte'
+	// import { draggable } from '@neodrag/svelte'
 
 	// TODO: Add fetch for ESV data
 
