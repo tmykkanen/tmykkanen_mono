@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types.js'
-	// import { draggable } from '@neodrag/svelte'
+	import Icon from '@iconify/svelte'
+	import { draggable } from '@neodrag/svelte'
 
 	// GET PROPS
 	const { data }: PageProps = $props()
@@ -110,7 +111,8 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div onmousedown={(e) => handleClick(e)}>
 	{#each verseData as { textGroupId, contents }}
-		<div data-text-group={textGroupId}>
+		<div data-text-group={textGroupId} use:draggable={{ handle: '.handle', grid: [50, 0] }}>
+			<Icon icon="mdi:drag-vertical" class="bg-amber-600 text-xl inline handle" />
 			{#each contents as item}
 				{#if item.type === 'verseNumber'}
 					<span data-item-Id={item.id} class="font-bold text-green-600">{`${item.value}\n`}</span>

@@ -20,6 +20,7 @@
 		"@repo/ui": "workspace:*"
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^4.2.0",
 		"@repo/eslint-config": "workspace:*",
 		"@repo/typescript-config": "workspace:*",
 		"@sveltejs/adapter-auto": "^4.0.0",
